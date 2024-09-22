@@ -7,7 +7,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">cbr</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.3.0</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.3.1</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -59,32 +59,29 @@
 
 
 <dt id="arg-name">name<a class="anchor" aria-label="anchor" href="#arg-name"></a></dt>
-<dd><p>the name of variable from http://www.cbr.ru/secinfo/secinfo.asmx</p></dd>
+<dd><p>the name of variable from https://cbr.ru/secinfo/secinfo.asmx</p></dd>
 
 </dl></div>
     <div class="section level2">
     <h2 id="value">Value<a class="anchor" aria-label="anchor" href="#value"></a></h2>
     <p>XML-tree</p>
     </div>
-    <div class="section level2">
-    <h2 id="details">Details<a class="anchor" aria-label="anchor" href="#details"></a></h2>
-    <p>Create body of html-request</p>
-    </div>
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="va">body</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/paste.html" class="external-link">paste0</a></span><span class="op">(</span></span></span>
-<span class="r-in"><span><span class="st">"&lt;?xml version=\"1.0\" encoding=\"utf-8\"?&gt;\n</span></span></span>
-<span class="r-in"><span><span class="st">&lt;soap:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" </span></span></span>
-<span class="r-in"><span><span class="st">  xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" </span></span></span>
+<span class="r-in"><span>  <span class="st">"&lt;?xml version=\"1.0\" encoding=\"utf-8\"?&gt;\n</span></span></span>
+<span class="r-in"><span><span class="st">&lt;soap:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"</span></span></span>
+<span class="r-in"><span><span class="st">  xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\"</span></span></span>
 <span class="r-in"><span><span class="st">  xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\"&gt;\n</span></span></span>
-<span class="r-in"><span><span class="st">    &lt;soap:Body&gt;\n                </span></span></span>
+<span class="r-in"><span><span class="st">    &lt;soap:Body&gt;\n</span></span></span>
 <span class="r-in"><span><span class="st">      &lt;AuctionsXML xmlns=\"http://web.cbr.ru/\"&gt;\n</span></span></span>
 <span class="r-in"><span><span class="st">        &lt;DateFrom&gt;2015-01-01&lt;/DateFrom&gt;\n</span></span></span>
-<span class="r-in"><span><span class="st">        &lt;DateTo&gt;2015-06-01&lt;/DateTo&gt;\n                </span></span></span>
+<span class="r-in"><span><span class="st">        &lt;DateTo&gt;2015-06-01&lt;/DateTo&gt;\n</span></span></span>
 <span class="r-in"><span><span class="st">      &lt;/AuctionsXML&gt;\n</span></span></span>
-<span class="r-in"><span><span class="st">    &lt;/soap:Body&gt;\n                </span></span></span>
-<span class="r-in"><span><span class="st">&lt;/soap:Envelope&gt;"</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="st">    &lt;/soap:Body&gt;\n</span></span></span>
+<span class="r-in"><span><span class="st">&lt;/soap:Envelope&gt;"</span></span></span>
+<span class="r-in"><span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="fu">cbr_get_body</span><span class="op">(</span><span class="va">body</span>, <span class="st">"AuctionsXML"</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> StartTag: invalid element name</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> StartTag: invalid element name</span>
@@ -159,7 +156,7 @@
 
 
     <footer><div class="pkgdown-footer-left">
-  <p>Developed by Boris Demeshev.</p>
+  <p>Developed by Boris Demeshev, Marcel Salikhov, Artem Simakin, Ivan Z.</p>
 </div>
 
 <div class="pkgdown-footer-right">
